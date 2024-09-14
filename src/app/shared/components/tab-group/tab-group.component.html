@@ -1,0 +1,23 @@
+<div class="tabs-container">
+  <div class="tabs-buttons">
+    @for (tab of tabsArray; track tab.id; let i = $index) {
+      <app-tab
+        [index]="i"
+        [content]="tab.labelTemplate"
+        [context]="tab.context"
+        (removeTab)="onRemove($event)"
+        (selectTab)="setActiveTab($event)"
+      ></app-tab>
+    }
+  </div>
+  <div class="active-tab-content">
+    @if (activeTab !== null && !!tabsArray.length) {
+      <ng-container
+        *ngTemplateOutlet="
+          tabsArray[activeTab].contentTemplate;
+          context: tabsArray[activeTab].context
+        "
+      ></ng-container>
+    }
+  </div>
+</div>

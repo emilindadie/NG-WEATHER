@@ -5,3 +5,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+.tabs-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}

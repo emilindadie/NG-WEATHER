@@ -1,0 +1,10 @@
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px !important;
+}

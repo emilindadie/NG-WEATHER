@@ -1,0 +1,4 @@
+<button class="btn btn-primary" (click)="selectTab.emit(index)">
+  <ng-container *ngTemplateOutlet="content; context: context"></ng-container>
+  <span class="close" (click)="removeTab.emit(index)">&times;</span>
+</button>

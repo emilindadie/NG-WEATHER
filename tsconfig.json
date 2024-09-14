@@ -4,17 +4,20 @@
     "outDir": "./dist/out-tsc",
     "baseUrl": "src",
     "sourceMap": true,
+    "strict": true,
     "declaration": false,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "target": "ES2022",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2016",
-      "dom"
-    ],
+    "module": "ES2022",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2016", "dom"],
     "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   }
 }
